@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+service NetworkManager stop;sleep 1;ifconfig $1 down;sleep 1;macchanger --random $1;sleep 1;ifconfig $1 up;service NetworkManager start;
